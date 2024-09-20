@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Agregar Nueva Reserva</h2>
+<form method="POST" action="{{ url_for('nuevo_reserva') }}">
+    <div class="form-group">
+        <label for="restaurante">Restaurante</label>
+        <input type="text" class="form-control" id="restaurante" placeholder="Restaurante" name="restaurante" required>
+    </div>
+    <div class="form-group">
+        <label for="cliente">Cliente</label>
+        <input type="text" class="form-control" id="cliente" placeholder="Cliente" name="cliente" required>
+    </div>
+    <div class="form-group">
+        <label for="tiposervicio">Tipo Servicio</label>
+        <input type="text" class="form-control" id="tiposervicio" placeholder="Tipo Servicio" name="tiposervicio" required>
+    </div>
+    <div class="form-group"></div>
+        <label for="mesas">Mesas</label>
+        <input type="number" class="form-control" id="mesas" placeholder="Cant. Mesas" name="mesas" required>
+    <div class="form-group">
+        <label for="fechareserva">Fecha</label>
+        <input type="date" class="form-control" id="fechareserva" name="fechareserva" required>
+    </div>
+    <div class="form-group"></div>
+        <label for="horareserva">Hora</label>
+        <input type="time" class="form-control" id="horareserva" name="horareserva" required>
+    <div class="form-group"></div>
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="@email" name="email" required>
+    <div class="form-group"></div>
+        <label for="">Telefono</label>
+        <input type="text" class="form-control" id="telefono" placeholder="Telefono" name="telefono" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Realizar Reserva</button>
+</form>
+{% endblock %}

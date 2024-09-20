@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cliente</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="form-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+                    <div class="form-container">
+                        <h3 class="title">Crear Cliente</h3>
+                        <form class="form-horizontal" method="POST" action="{{ url_for('crear_cliente') }}">
+                            <div class="form-icon">
+                                <i class="fa fa-user-circle"></i>
+                            </div>
+
+                            <!-- Campo Nombre -->
+                            <div class="form-group">
+                                <span class="input-icon"><i class="fa fa-user"></i></span>
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+                            </div>
+                            <!-- Campo Apellido -->
+                            <div class="form-group"></div>
+                                <span class="input-icon"><i class="fa fa-user"></i></span>
+                                <input type="text" name="apellido" class="form-control" placeholder="Apellido" required>
+                            </div>
+                            <!-- Campo Email -->
+                            <div class="form-group">
+                                <span class="input-icon"><i class="fa fa-envelope"></i></span>
+                                <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
+                            </div>
+
+                            <!-- Campo Teléfono -->
+                            <div class="form-group">
+                                <span class="input-icon"><i class="fa fa-phone"></i></span>
+                                <input type="text" name="telefono" class="form-control" placeholder="Teléfono" required>
+                            </div>
+
+                            <!-- Campo Contraseña 
+                            <div class="form-group">
+                                <span class="input-icon"><i class="fa fa-lock"></i></span>
+                                <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                            </div>
+
+                            -- Botón Crear Cliente -->
+                            <button class="btn signin" type="submit">Crear Cliente</button>
+                        </form>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

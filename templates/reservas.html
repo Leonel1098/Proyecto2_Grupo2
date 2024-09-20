@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Listado de Reservas</h2>
+<p>Aqui puede registrar y ver las proximas reservas</p>
+<a href="{{ url_for('nuevo_reserva') }}" class="btn btn-primary mb-3">Agregar Reserva</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Reserva ID</th>
+            <th>Restaurante</th>
+            <th>Cliente</th>
+            <th>Tipo Servicio</th>
+            <th>Mesas</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Control</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reserva in reservas %}
+        <tr>
+            <td>{{ reserva.Reserva_ID }}</td>
+            <td>{{ reserva.Restaurante_ID }}</td>
+            <td>{{ reserva.Cliente }}</td>
+            <td>{{ reserva.Tipo_Servicio }}</td>
+            <td>{{ reserva.Mesas }}</td>
+            <td>{{ reserva.Fecha_Reserva }}</td>
+            <td>{{ reserva.Hora_Reserva }}</td>
+            <td>{{ reserva.Email }}</td>
+            <td>{{ reserva.Telefono }}</td>
+            <td>
+            </form>
+            <a href="/reservas/update" class="btn btn-primary btn-sm" >Editar</a>
+            <a href="{{ url_for('eliminar_reserva', id=reserva.Reserva_ID) }}" class="btn btn-danger btn-sm">Borrar</a>
+            </td>
+                   
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
