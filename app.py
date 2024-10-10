@@ -27,7 +27,7 @@ def crear_cliente():
         # Redirigir después de la creación sin flash
         return redirect(url_for('listar_clientes'))
     
-    return render_template('Crear_Cliente.html')
+    return render_template('base.html')
 
 # Listar todos los clientes
 @app.route('/clientes')

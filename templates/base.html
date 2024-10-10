@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Ventas</title>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" />
-
+    <title>Restaurante - Inicio</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="my-4">Sistema de Reservas de Restaurante</h1>
-        <nav class="nav">
-            <a href="{{ url_for('index') }}" class="btn btn-primary btn-sm" >Inicio</a>
-            <a href="{{ url_for('listar_reservas') }}" class="btn btn-primary btn-sm" >Reservas</a>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Mi Restaurante</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#ubicaciones">Ubicaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
-        <hr>
-        {% block content %}{% endblock %}
-    </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenidos a Mi Restaurante</h1>
+            <p>Una experiencia gastronómica inolvidable</p>
+            <a href="#reservas" class="btn">Reserva ahora</a>
+        </div>
+    </section>
+
+    <!-- Otras secciones como Carta, Reservas, Ubicaciones -->
+
 </body>
 </html>
